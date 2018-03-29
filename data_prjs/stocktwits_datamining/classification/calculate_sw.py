@@ -59,7 +59,7 @@ def main() :
         if (n_pos+n_neg) != 0 :
             sw = (n_pos-n_neg)/(n_pos+n_neg)
         sw_list.append(sw)
-        sw_collection.insert({'term': term_, 'n_total': n_neg+n_pos, 'n_pos': n_pos, 'n_neg': n_neg, 'SW': sw})
+        sw_collection.insert({'term': term_, 'n_total': n_neg+n_pos, 'n_pos': n_pos, 'n_neg': n_neg, 'calculated_SW': sw, 'L1_SW': lexicon_L1[term_]})
         print(term)
     print(len(lexicon_L1))
     lexicon_L2 = read_lexicon("l2_lexicon.csv")
