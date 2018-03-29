@@ -37,6 +37,7 @@ def main() :
     sw_list = []
     for term in lexicon_L1:
         term_list.append(term)
+        term_ = term
         term = ' ' + term + ' '
         n_pos = 0
         n_neg = 0
@@ -46,7 +47,6 @@ def main() :
             message = ' ' + message + ' '
             if term in message:
                 n_pos += 1;
-                print(n_pos)
         n_pos_list.append(n_pos)
         result = bearish_collection_sample.find()
         for r in result:
@@ -55,9 +55,11 @@ def main() :
             if term in message:
                 n_neg += 1;
         n_neg_list.append(n_neg)
-        sw = (n_pos-n_neg)/(n_pos+n_neg)
+        sw = 0;
+        if (n_pos+n_neg) != 0 :
+            sw = (n_pos-n_neg)/(n_pos+n_neg)
         sw_list.append(sw)
-        sw_collection.insert({'term': term, 'n_total': n_neg+n_pos, 'n_pos': n_pos, 'n_neg': n_neg, 'SW': sw})
+        sw_collection.insert({'term': term_, 'n_total': n_neg+n_pos, 'n_pos': n_pos, 'n_neg': n_neg, 'SW': sw})
         print(term)
     print(len(lexicon_L1))
     lexicon_L2 = read_lexicon("l2_lexicon.csv")
