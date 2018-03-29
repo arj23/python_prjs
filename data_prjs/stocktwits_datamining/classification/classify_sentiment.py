@@ -1,7 +1,7 @@
 import pymongo
 import re
 import urllib
-import math
+
 username = 'admin'
 password = urllib.parse.quote_plus('abc!@#QWE')
 
@@ -59,7 +59,7 @@ def main():
     for message in result_curser :
         if (message['entities']['sentiment']):
             if(message['entities']['sentiment']['basic'] == 'Bullish') :
-                bullish_collection.insert({'user' : message['user']['username'] , 'created_at' : message['created_at'] , 'body' : message['body'], 'processed_body' : message_cleaning(message['body'] ), 'random_id' : ,})
+                bullish_collection.insert({'user' : message['user']['username'] , 'created_at' : message['created_at'] , 'body' : message['body'], 'processed_body' : message_cleaning(message['body'] )})
             if(message['entities']['sentiment']['basic'] == 'Bearish') :
                 bearish_collection.insert({'user' : message['user']['username'] , 'created_at' : message['created_at'] , 'body' : message['body'], 'processed_body' : message_cleaning(message['body'] )})
 
