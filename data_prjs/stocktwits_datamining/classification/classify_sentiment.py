@@ -32,17 +32,12 @@ def message_cleaning(message) :
     message_ = re.sub(r"\@\S+",'usertag', message_)
     message_ = re.sub(r"https://\S+",'linktag', message_)
     message_ = re.sub(r"http://\S+",'linktag', message_)
+    message_ = re.sub(r"\b[0-9]+\b",'numbertag', message_)
 
     return  message_
 
 def test() :
-    db_obj = connect_to_mongodb(db_address, 'stocktwits')
-    msg_collection = db_obj['suggested_msg']
-    bullish_collection  = db_obj['bullish_msg']
-    bearish_collection = db_obj['bearish_msg']
-    bullish_collection.remove({})
-    bearish_collection.remove({})
-    message = ":) my proe a vendore the pure $1Sfg @RSDF not happen neither receive no good an example http://stackoverflow.com/questions/4643142/regex-to-test-if-string-begins-with-http-or-https  @mamad :(  "
+    message = ":) my proe a vendore the 54 pure $1Sfg @RSDF not happen4 neither receive no good an example http://stackoverflow.com/questions/4643142/regex-to-test-if-string-begins-with-http-or-https  @mamad :(  "
     message_ = message_cleaning(message)
     print(message_)
 
@@ -65,4 +60,4 @@ def main():
 
 
 
-if __name__ == "__main__": main()
+if __name__ == "__main__": test()
