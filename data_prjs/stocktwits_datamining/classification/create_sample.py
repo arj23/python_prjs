@@ -20,12 +20,10 @@ def main() :
     bearish_collection_sample  = db_obj['bearish_msg_sample']
     for i in range(75000) :
         count = bullish_collection.count()
-        print(count)
         result = bullish_collection.find()[random.randrange(count)]
         bullish_collection_sample.insert(result)
         bullish_collection.remove(result)
         count = bearish_collection.count()
-        print(count)
         result = bearish_collection.find()[random.randrange(count)]
         bearish_collection_sample.insert(result)
         bearish_collection.remove(result)
