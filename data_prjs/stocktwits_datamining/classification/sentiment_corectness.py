@@ -45,7 +45,7 @@ def main():
             term = ' ' + term + ' '
             if term in message:
                 sw_0 += calculated_SW[term_]
-                sw_L2 += L1_SW[term_]
+                sw_L2 += float(L1_SW[term_])
         if(sw_0 > 0) :
             correct_0 += 1
         if(sw_L2 > 0) :
