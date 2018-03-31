@@ -48,9 +48,9 @@ def main():
     bullish_correct_L1 = 0
     bullish_classified_L1 = 0
 
-    count_bullish = bullish_collection.count()
+    count_bullish = 76951
     count = bullish_collection.count()
-    for i in range(76000):
+    for i in range(76951):
         r = bullish_collection.find()[random.randrange(count)]
         message = r['processed_body']
         message = ' ' + message + ' '
