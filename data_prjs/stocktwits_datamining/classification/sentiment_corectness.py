@@ -20,8 +20,8 @@ def main():
     result = sw_collection.find()
 
     term_list = []
-    calculated_SW = []
-    L1_SW = []
+    calculated_SW = {}
+    L1_SW = {}
 
     for message in result :
         term_list.append(message['term'])
@@ -31,14 +31,15 @@ def main():
     result = bullish_collection.find()
     count = bullish_collection.count()
     correct_0 = 0
-    correct_L2 = 0
+    correct_L1 = 0
     classified_0 = 0
-    classified_L2 = 0
+    classified_L1 = 0
 
-    for message in result :
+    for r in result :
+        message = r['processed_body']
         message = ' ' + message + ' '
-        sw_0 = 0;
-        sw_L2 = 0;
+        sw_0 = 0
+        sw_L2 = 0
         for term in term_list:
             term = ' ' + term + ' '
             if term in message:
@@ -47,10 +48,14 @@ def main():
         if(sw_0 > 0) :
             correct_0 += 1
         if(sw_L2 > 0) :
-            correct_L2 += 1
+            correct_L1 += 1
         if(sw_0 != 0) :
             classified_0 += 1
         if (sw_L2 != 0):
-            classified_L2 += 1
+            classified_L1 += 1
 
-    table5.insert({'correct_0': correct_0, 'correct_L2': correct_L2, 'classified_0': classified_0, 'classified_L2': classified_L2})
+    table5.insert({'correct_0': correct_0, 'correct_L2': correct_L1, 'classified_0': classified_0, 'classified_L2': classified_L1 ,
+                   'correct_percentage': correct_0/count, 'correct_L1_percentage': correct_L1/count,
+                   'claasified_percentage': classified_0 / count, 'classified_L1_percentage': classified_L1 / count})
+
+if __name__ == "__main__": main()

@@ -72,7 +72,33 @@ def append_df_to_excel(filename, df, sheetname='sheet1', startrow=None,
     # save the workbook
     writer.save()
 
-def main():
+def main2():
+    db_obj = connect_to_mongodb(db_address, 'stocktwits')
+    sw_collection  = db_obj['sw_collection']
+    result = sw_collection.find()
+
+    term_list = []
+    npos_list = []
+    ntotal_list = []
+    nneg_list = []
+    sw_list = []
+    sw_l1 = []
+
+    for message in result :
+        term_list.append(message['term'])
+        ntotal_list.append(message['n_total'])
+        npos_list.append(message['n_pos'])
+        nneg_list.append(message['n_neg'])
+        sw_list.append(message['calculated_SW'])
+        sw_l1.append(message['L1_SW'])
+
+    df = DataFrame(data=OrderedDict({ 'Keywird': term_list, 'n_total': ntotal_list, 'n_neg' : nneg_list,'n_pos': npos_list,'SW': sw_list,'L1_SW':sw_l1}))
+    df = df.applymap(lambda x: x.encode('unicode_escape').
+                                   decode('utf-8') if isinstance(x, str) else x)
+
+    append_df_to_excel("sw.xlsx",df)
+
+def main1():
     db_obj = connect_to_mongodb(db_address, 'stocktwits')
     bullish_collection  = db_obj['bullish_msg']
     bearish_collection = db_obj['bearish_msg']
@@ -116,4 +142,5 @@ def main():
 
 
 
-if __name__ == "__main__": main()
+
+if __name__ == "__main__": main2()
