@@ -41,10 +41,11 @@ def main():
         sw_0 = 0
         sw_L2 = 0
         for term in term_list:
+            term_ = term
             term = ' ' + term + ' '
             if term in message:
-                sw_0 += calculated_SW[term]
-                sw_L2 += L1_SW[term]
+                sw_0 += calculated_SW[term_]
+                sw_L2 += L1_SW[term_]
         if(sw_0 > 0) :
             correct_0 += 1
         if(sw_L2 > 0) :
