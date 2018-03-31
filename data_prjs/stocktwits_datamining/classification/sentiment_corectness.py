@@ -69,7 +69,7 @@ def main():
             if l2_term in message:
                 if(lexicon_L2[term_] == 'positive') :
                     sw_L2 += 1
-                if(lexicon_L2[term_] == 'negetive') :
+                if(lexicon_L2[term_] == 'negative') :
                     sw_L2 -= 1
         if(sw_0 > 0) :
             bullish_correct_0 += 1
