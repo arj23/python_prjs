@@ -41,53 +41,53 @@ def main():
         calculated_SW[message['term']] = message['calculated_SW']
         L1_SW[message['term']] = message['L1_SW']
 
-    bullish_correct_0 = 0
-    bullish_classified_0 = 0
-    bullish_correct_L2 = 0
-    bullish_classified_L2 = 0
-    bullish_correct_L1 = 0
-    bullish_classified_L1 = 0
-
-    count_bullish = 76951
-    count = bullish_collection.count()
-    for i in range(76951):
-        r = bullish_collection.find()[random.randrange(count)]
-        message = r['processed_body']
-        message = ' ' + message + ' '
-        sw_0 = 0
-        sw_L1 = 0
-        sw_L2 = 0
-        for term in L1_term_list:
-            term_ = term
-            term = ' ' + term + ' '
-            if term in message:
-                sw_0 += calculated_SW[term_]
-                sw_L1 += float(L1_SW[term_])
-        for l2_term in lexicon_L2:
-            term_ = l2_term
-            l2_term = ' ' + l2_term + ' '
-            if l2_term in message:
-                if(lexicon_L2[term_] == 'positive') :
-                    sw_L2 += 1
-                if(lexicon_L2[term_] == 'negative') :
-                    sw_L2 -= 1
-        if(sw_0 > 0) :
-            bullish_correct_0 += 1
-        if(sw_0 != 0) :
-            bullish_classified_0 += 1
-        if(sw_L1 > 0) :
-            bullish_correct_L1 += 1
-        if (sw_L1 != 0):
-            bullish_classified_L1 += 1
-        if(sw_L2 > 0) :
-            bullish_correct_L2 += 1
-        if (sw_L2 != 0):
-            bullish_classified_L2 += 1
-
-    table5.insert({'bullish_correct_0': bullish_correct_0, 'bullish_classified_0': bullish_classified_0, 'bullish_correct_L1': bullish_correct_L1, 'bullish_classified_L1': bullish_classified_L1 , 'bullish_correct_L2': bullish_correct_L2, 'bullish_classified_L2': bullish_classified_L2 ,
-                   'bullish_correct_percentage': bullish_correct_0/count_bullish, 'bullish_correct_L1_percentage': bullish_correct_L1/count_bullish,
-                   'bullish_claasified_percentage': bullish_classified_0 / count_bullish, 'bullish_classified_L1_percentage': bullish_classified_L1 / count_bullish})
-
+    # bullish_correct_0 = 0
+    # bullish_classified_0 = 0
+    # bullish_correct_L2 = 0
+    # bullish_classified_L2 = 0
+    # bullish_correct_L1 = 0
+    # bullish_classified_L1 = 0
+    #
+    # count_bullish = 76951
+    # count = bullish_collection.count()
+    # for i in range(76951):
+    #     r = bullish_collection.find()[random.randrange(count)]
+    #     message = r['processed_body']
+    #     message = ' ' + message + ' '
+    #     sw_0 = 0
+    #     sw_L1 = 0
+    #     sw_L2 = 0
+    #     for term in L1_term_list:
+    #         term_ = term
+    #         term = ' ' + term + ' '
+    #         if term in message:
+    #             sw_0 += calculated_SW[term_]
+    #             sw_L1 += float(L1_SW[term_])
+    #     for l2_term in lexicon_L2:
+    #         term_ = l2_term
+    #         l2_term = ' ' + l2_term + ' '
+    #         if l2_term in message:
+    #             if(lexicon_L2[term_] == 'positive') :
+    #                 sw_L2 += 1
+    #             if(lexicon_L2[term_] == 'negative') :
+    #                 sw_L2 -= 1
+    #     if(sw_0 > 0) :
+    #         bullish_correct_0 += 1
+    #     if(sw_0 != 0) :
+    #         bullish_classified_0 += 1
+    #     if(sw_L1 > 0) :
+    #         bullish_correct_L1 += 1
+    #     if (sw_L1 != 0):
+    #         bullish_classified_L1 += 1
+    #     if(sw_L2 > 0) :
+    #         bullish_correct_L2 += 1
+    #     if (sw_L2 != 0):
+    #         bullish_classified_L2 += 1
+    #
+    # table5.insert({'bullish_correct_0': bullish_correct_0, 'bullish_classified_0': bullish_classified_0, 'bullish_correct_L1': bullish_correct_L1, 'bullish_classified_L1': bullish_classified_L1 , 'bullish_correct_L2': bullish_correct_L2, 'bullish_classified_L2': bullish_classified_L2 ,
+    #                'bullish_correct_percentage': bullish_correct_0/count_bullish, 'bullish_correct_L1_percentage': bullish_correct_L1/count_bullish,
+    #                'bullish_claasified_percentage': bullish_classified_0 / count_bullish, 'bullish_classified_L1_percentage': bullish_classified_L1 / count_bullish})
+    #
     bearish_correct_0 = 0
     bearish_classified_0 = 0
     bearish_correct_L2 = 0
@@ -103,19 +103,19 @@ def main():
         sw_0 = 0
         sw_L1 = 0
         sw_L2 = 0
-        for term in L1_term_list:
-            term_ = term
-            term = ' ' + term + ' '
-            if term in message:
-                sw_0 += calculated_SW[term_]
-                sw_L1 += float(L1_SW[term_])
+        # for term in L1_term_list:
+        #     term_ = term
+        #     term = ' ' + term + ' '
+        #     if term in message:
+        #         sw_0 += calculated_SW[term_]
+        #         sw_L1 += float(L1_SW[term_])
         for l2_term in lexicon_L2:
             term_ = l2_term
             l2_term = ' ' + l2_term + ' '
             if l2_term in message:
                 if(lexicon_L2[term_] == 'positive') :
                     sw_L2 += 1
-                if(lexicon_L2[term_] == 'negetive') :
+                if(lexicon_L2[term_] == 'negative') :
                     sw_L2 -= 1
         if(sw_0 < 0) :
             bearish_correct_0 += 1
