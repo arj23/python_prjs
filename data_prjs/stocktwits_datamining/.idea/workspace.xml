@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a29958d-40fc-4358-9783-658bd6af8491" name="Default" comment="" />
+    <list default="true" id="8a29958d-40fc-4358-9783-658bd6af8491" name="Default" comment="remove prints">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classification/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classification/classify_sentiment.py" afterPath="$PROJECT_DIR$/classification/classify_sentiment.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,44 +19,47 @@
     <SUITE FILE_PATH="coverage/stocktwits_datamining$update_db_from_bottom.coverage" NAME="update_db_from_bottom Coverage Results" MODIFIED="1518379122007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$30minall.coverage" NAME="30minall Coverage Results" MODIFIED="1518380028153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/query_stocktwits_statistics" />
     <SUITE FILE_PATH="coverage/read_stocktwits$creat_csv.coverage" NAME="creat_csv Coverage Results" MODIFIED="1516562749079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/stocktwits_datamining$save_classify_to_excel.coverage" NAME="save_classify_to_excel Coverage Results" MODIFIED="1519992838816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
-    <SUITE FILE_PATH="coverage/stocktwits_datamining$classify_sentiment.coverage" NAME="classify_sentiment Coverage Results" MODIFIED="1522334134189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
+    <SUITE FILE_PATH="coverage/stocktwits_datamining$save_classify_to_excel.coverage" NAME="save_classify_to_excel Coverage Results" MODIFIED="1524210614371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
+    <SUITE FILE_PATH="coverage/stocktwits_datamining$classify_sentiment.coverage" NAME="classify_sentiment Coverage Results" MODIFIED="1524213271634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
     <SUITE FILE_PATH="coverage/read_stocktwits$store_in_mongo_db.coverage" NAME="store_in_mongo_db Coverage Results" MODIFIED="1517489864597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/stocktwits_datamining$sentiment_corectness.coverage" NAME="sentiment_corectness Coverage Results" MODIFIED="1522526330571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$classify_bullish.coverage" NAME="classify_bullish Coverage Results" MODIFIED="1519990960076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$30min2016.coverage" NAME="30min2016 Coverage Results" MODIFIED="1519969095992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/query_stocktwits_statistics" />
-    <SUITE FILE_PATH="coverage/stocktwits_datamining$calculate_sw.coverage" NAME="calculate_sw Coverage Results" MODIFIED="1522328019760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
+    <SUITE FILE_PATH="coverage/stocktwits_datamining$calculate_sw.coverage" NAME="calculate_sw Coverage Results" MODIFIED="1522427540172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
     <SUITE FILE_PATH="coverage/read_stocktwits$update_db_from_bottom.coverage" NAME="update_db_from_bottom Coverage Results" MODIFIED="1517577387298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$30min2017__1_.coverage" NAME="30min2017 (1) Coverage Results" MODIFIED="1519362668787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/query_stocktwits_statistics" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="30min2017.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/query_stocktwits_statistics/30min2017.py">
+      <file leaf-file-name="classify_sentiment.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classification/classify_sentiment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="30min2016.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/query_stocktwits_statistics/30min2016.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2562">
-              <caret line="127" column="4" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
+            <state relative-caret-position="53">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#281#295#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classify_sentiment.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/classification/classify_sentiment.py">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classification/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="62" column="33" lean-forward="true" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="select_classified_messages.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classification/select_classified_messages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -63,8 +70,8 @@
       <file leaf-file-name="calculate_sw.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/calculate_sw.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="462">
+              <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="45" selection-end-column="41" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -72,11 +79,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="periodic_executor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/periodic_executor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2583">
+              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3570">
+              <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cursor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/cursor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24129">
+              <caret line="1175" column="0" lean-forward="false" selection-start-line="1175" selection-start-column="0" selection-end-line="1175" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="create_sample.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/create_sample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="11" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -96,45 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creat_csv.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read_data/creat_csv.py">
+      <file leaf-file-name="sentiment_corectness.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classification/sentiment_corectness.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="30minall.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/query_stocktwits_statistics/30minall.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1239">
-              <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="store_in_mongo_db.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read_data/store_in_mongo_db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update_db_from_bottom.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read_data/update_db_from_bottom.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="218">
+              <caret line="132" column="39" lean-forward="true" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="39" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -154,7 +157,15 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>print(str_datetime_to_obj_datetime(date_str</find>
+      <find>bullish</find>
+      <find>bull</find>
     </findStrings>
+    <replaceStrings>
+      <replace>bear</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -171,9 +182,14 @@
         <option value="$PROJECT_DIR$/classification/classify_bullishes.py" />
         <option value="$PROJECT_DIR$/classification/classify_bearish.py" />
         <option value="$PROJECT_DIR$/classification/classify_bullish.py" />
-        <option value="$PROJECT_DIR$/classification/save_classify_to_excel.py" />
         <option value="$PROJECT_DIR$/calculate_sw.py" />
+        <option value="$PROJECT_DIR$/classification/create_sample.py" />
+        <option value="$PROJECT_DIR$/classification/save_classify_to_excel.py" />
         <option value="$PROJECT_DIR$/classification/calculate_sw.py" />
+        <option value="$PROJECT_DIR$/select_classified_sentiments.py" />
+        <option value="$PROJECT_DIR$/classification/select_classified_messages.py" />
+        <option value="$PROJECT_DIR$/classification/test.py" />
+        <option value="$PROJECT_DIR$/classification/sentiment_corectness.py" />
         <option value="$PROJECT_DIR$/classification/classify_sentiment.py" />
       </list>
     </option>
@@ -185,10 +201,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
+    <option name="x" value="533" />
+    <option name="y" value="2" />
     <option name="width" value="1400" />
-    <option name="height" value="990" />
+    <option name="height" value="988" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -209,6 +225,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
@@ -224,7 +241,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,11 +268,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.documentation.PythonDocumentationConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -278,24 +295,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.classify_sentiment">
-    <configuration name="30min2016" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/query_stocktwits_statistics" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="stocktwits_datamining" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/query_stocktwits_statistics/30min2016.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -509,20 +508,38 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="sentiment_corectness" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classification" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="stocktwits_datamining" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classification/sentiment_corectness.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.30min2016" />
-      <item index="1" class="java.lang.String" itemvalue="Python.classify_bullish" />
-      <item index="2" class="java.lang.String" itemvalue="Python.save_classify_to_excel" />
-      <item index="3" class="java.lang.String" itemvalue="Python.calculate_sw" />
-      <item index="4" class="java.lang.String" itemvalue="Python.classify_sentiment" />
+      <item index="0" class="java.lang.String" itemvalue="Python.classify_bullish" />
+      <item index="1" class="java.lang.String" itemvalue="Python.save_classify_to_excel" />
+      <item index="2" class="java.lang.String" itemvalue="Python.calculate_sw" />
+      <item index="3" class="java.lang.String" itemvalue="Python.classify_sentiment" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sentiment_corectness" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.classify_sentiment" />
-        <item index="1" class="java.lang.String" itemvalue="Python.calculate_sw" />
-        <item index="2" class="java.lang.String" itemvalue="Python.save_classify_to_excel" />
-        <item index="3" class="java.lang.String" itemvalue="Python.classify_bullish" />
-        <item index="4" class="java.lang.String" itemvalue="Python.30min2016" />
+        <item index="1" class="java.lang.String" itemvalue="Python.save_classify_to_excel" />
+        <item index="2" class="java.lang.String" itemvalue="Python.sentiment_corectness" />
+        <item index="3" class="java.lang.String" itemvalue="Python.calculate_sw" />
+        <item index="4" class="java.lang.String" itemvalue="Python.classify_bullish" />
       </list>
     </recent_temporary>
   </component>
@@ -540,6 +557,21 @@
       <option name="presentableId" value="Default" />
       <updated>1515135667546</updated>
     </task>
+    <task id="LOCAL-00001" summary="remove prints">
+      <created>1522335235300</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1522335235300</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update impl">
+      <created>1522353308622</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1522353308622</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -553,19 +585,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1933405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27712137" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.49785176" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39932126" sideWeight="0.5042965" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23529412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23529412" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39932126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39932126" sideWeight="0.49570355" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -582,6 +613,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="remove prints" />
+    <MESSAGE value="update impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="update impl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -602,46 +638,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/classification/classify_sentiment.py</url>
-          <line>30</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/classification/calculate_sw.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="58" />
+          <url>file://$PROJECT_DIR$/classification/classify_sentiment.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/classification/classify_sentiment.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="61" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="88" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/query_stocktwits_statistics/30minall.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1239">
-          <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/read_data/update_db_from_bottom.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="52" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_data/creat_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="176" column="0" lean-forward="true" selection-start-line="171" selection-start-column="3" selection-end-line="176" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -658,9 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1239">
           <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -668,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="819">
           <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,43 +700,7 @@
         <state relative-caret-position="567">
           <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="52" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/query_stocktwits_statistics/30min2017.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/query_stocktwits_statistics/30minall.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1239">
-          <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_data/store_in_mongo_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_data/update_db_from_bottom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -730,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1617">
           <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,7 +725,7 @@
         <state relative-caret-position="819">
           <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -756,7 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,7 +750,7 @@
         <state relative-caret-position="1092">
           <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="42" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -781,7 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2037">
           <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,7 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,13 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/cursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="575" column="0" lean-forward="false" selection-start-line="575" selection-start-column="0" selection-end-line="575" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/uri_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -923,7 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,9 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1239">
           <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -941,9 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2562">
           <caret line="127" column="4" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -960,7 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="819">
           <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -979,7 +947,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -994,10 +962,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classification/create_sample.py">
+    <entry file="file://$PROJECT_DIR$/classification/l2_lexicon.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="-5964">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/cursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24129">
+          <caret line="1175" column="0" lean-forward="false" selection-start-line="1175" selection-start-column="0" selection-end-line="1175" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/periodic_executor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2583">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/select_classified_messages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -1014,10 +1013,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classification/create_sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classification/calculate_sw.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="462">
+          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="45" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/sentiment_corectness.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="132" column="39" lean-forward="true" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="39" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -1026,10 +1055,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classification/classify_sentiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="62" column="33" lean-forward="true" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+        <state relative-caret-position="53">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#281#295#0" expanded="true" />
           </folding>
         </state>
       </provider>

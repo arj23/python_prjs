@@ -1,63 +1,124 @@
+# You need to install scikit-learn:
+# sudo pip install scikit-learn
+#
+# Dataset: Polarity dataset v2.0
+# http://www.cs.cornell.edu/people/pabo/movie-review-data/
+#
+# Full discussion:
+# https://marcobonzanini.wordpress.com/2015/01/19/sentiment-analysis-with-python-and-scikit-learn
 import pymongo
-import re
 import urllib
+import random
+import os
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn import svm
+from sklearn.metrics import classification_report
+import time
 
 username = 'admin'
 password = urllib.parse.quote_plus('abc!@#QWE')
-
-db_address = 'mongodb://'+ username +':' + password + '@137.74.100.108/admin?authSource=admin'
 
 def connect_to_mongodb (db_url, db_name):
     connection = pymongo.MongoClient(db_url)
     return connection[db_name]
 
-def message_cleaning(message) :
-    message_ = ""
-    message_ += message
-    message_ = message_.replace("not " , "negtag_")
-    message_ = message_.replace("no " , "negtag_")
-    message_ = message_.replace("none " , "negtag_")
-    message_ = message_.replace("neither " , "negtag_")
-    message_ = message_.replace("never " , "negtag_")
-    message_ = message_.replace("neither " , "negtag_")
-    message_ = message_.replace("nobody " , "negtag_")
-    message_ = message_.replace(" a " , " ")
-    message_ = message_.replace(" an " , " ")
-    message_ = message_.replace(" the " , " ")
-    message_ = message_.replace(":(" , "emojineg")
-    message_ = message_.replace(":-(" , "emojineg")
-    message_ = message_.replace(":)" , "emojipos")
-    message_ = message_.replace(":-)" , "emojipos")
-    message_ = re.sub(r"\$\S+",'cashtag', message_)
-    message_ = re.sub(r"\@\S+",'usertag', message_)
-    message_ = re.sub(r"https://\S+",'linktag', message_)
-    message_ = re.sub(r"http://\S+",'linktag', message_)
-    message_ = re.sub(r"\b[0-9]+\b",'numbertag', message_)
+db_address = 'mongodb://'+ username +':' + password + '@137.74.100.108/admin?authSource=admin'
 
-    return  message_
+if __name__ == '__main__':
 
-def test() :
-    message = ":) my proe a vendore the 54 pure $1Sfg @RSDF not happen4 neither receive no good an example http://stackoverflow.com/questions/4643142/regex-to-test-if-string-begins-with-http-or-https  @mamad :(  "
-    message_ = message_cleaning(message)
-    print(message_)
-
-def main():
+    classes = ['pos', 'neg']
     db_obj = connect_to_mongodb(db_address, 'stocktwits')
-    msg_collection = db_obj['suggested_msg']
+    bullish_collection_sample  = db_obj['bullish_msg_sample']
+    bearish_collection_sample  = db_obj['bearish_msg_sample']
     bullish_collection  = db_obj['bullish_msg']
-    bearish_collection = db_obj['bearish_msg']
-    bullish_collection.remove({})
-    bearish_collection.remove({})
+    bearish_collection  = db_obj['bearish_msg']
+    table5  = db_obj['table5']
 
-    result_curser = msg_collection.find()
+    # Read the data
+    train_data = []
+    train_labels = []
+    test_data = []
+    test_labels = []
 
-    for message in result_curser :
-        if (message['entities']['sentiment']):
-            if(message['entities']['sentiment']['basic'] == 'Bullish') :
-                bullish_collection.insert({'user' : message['user']['username'] , 'created_at' : message['created_at'] , 'body' : message['body'], 'processed_body' : message_cleaning(message['body'] )})
-            if(message['entities']['sentiment']['basic'] == 'Bearish') :
-                bearish_collection.insert({'user' : message['user']['username'] , 'created_at' : message['created_at'] , 'body' : message['body'], 'processed_body' : message_cleaning(message['body'] )})
+    result = bullish_collection_sample.find()
+    for m in result :
+        train_data.append(m['processed_body'])
+        train_labels.append("pos")
 
+    result = bearish_collection_sample.find()
+    for m in result :
+        train_data.append(m['processed_body'])
+        train_labels.append("neg")
 
+    count_bullish = 75000
+    count = bullish_collection.count()
+    for i in range(75000):
+        r = bullish_collection.find()[random.randrange(count)]
+        test_data.append(r['processed_body'])
+        test_labels.append("pos")
 
-if __name__ == "__main__": main()
+    result = bearish_collection.find()
+    i = 0
+    for m in result :
+        test_data.append(m['processed_body'])
+        test_labels.append("neg")
+        i = i + 1
+        if i is 75000 :
+            break
+
+    # Create feature vectors
+    vectorizer = TfidfVectorizer(min_df=5,
+                                 max_df = 0.8,
+                                 sublinear_tf=True,
+                                 use_idf=True)
+    train_vectors = vectorizer.fit_transform(train_data)
+    test_vectors = vectorizer.transform(test_data)
+
+    # Perform classification with SVM, kernel=rbf
+    classifier_rbf = svm.SVC()
+    t0 = time.time()
+    classifier_rbf.fit(train_vectors, train_labels)
+    t1 = time.time()
+    prediction_rbf = classifier_rbf.predict(test_vectors)
+    t2 = time.time()
+    time_rbf_train = t1-t0
+    time_rbf_predict = t2-t1
+
+    # Perform classification with SVM, kernel=linear
+    classifier_linear = svm.SVC(kernel='linear')
+    t0 = time.time()
+    classifier_linear.fit(train_vectors, train_labels)
+    t1 = time.time()
+    prediction_linear = classifier_linear.predict(test_vectors)
+    t2 = time.time()
+    time_linear_train = t1-t0
+    time_linear_predict = t2-t1
+
+    # Perform classification with SVM, kernel=linear
+    classifier_liblinear = svm.LinearSVC()
+    t0 = time.time()
+    classifier_liblinear.fit(train_vectors, train_labels)
+    t1 = time.time()
+    prediction_liblinear = classifier_liblinear.predict(test_vectors)
+    t2 = time.time()
+    time_liblinear_train = t1-t0
+    time_liblinear_predict = t2-t1
+
+    # Print results in a nice table
+    print("Results for SVC(kernel=rbf)")
+    print("Training time: %fs; Prediction time: %fs" % (time_rbf_train, time_rbf_predict))
+    print(classification_report(test_labels, prediction_rbf))
+    table5.insert({'Results_for_SVC(kernel=rbf)':classification_report(test_labels, prediction_rbf)})
+    print("Results for SVC(kernel=linear)")
+    print("Training time: %fs; Prediction time: %fs" % (time_linear_train, time_linear_predict))
+    print(classification_report(test_labels, prediction_linear))
+    print("Results for LinearSVC()")
+    print("Training time: %fs; Prediction time: %fs" % (time_liblinear_train, time_liblinear_predict))
+    print(classification_report(test_labels, prediction_liblinear))
+
+    table5.insert({'Training_time_for_SVC(kernel=rbf)': time_rbf_train, 'Prediction_time_for_SVC(kernel=rbf)': time_rbf_predict,
+                   'Results_for_SVC(kernel=rbf)':classification_report(test_labels, prediction_rbf),
+                   'Training_time_for_SVC(kernel=linear)': time_linear_train, 'Prediction_time_for_SVC(kernel=linear)': time_linear_predict,
+                   'Results_for_SVC(kernel=linear)': classification_report(test_labels, prediction_linear),
+                   'Training_time_for_LinearSVC()': time_liblinear_train, 'Prediction_time_for_LinearSVC()': time_liblinear_predict,
+                   'Results_for_LinearSVC()': classification_report(test_labels, prediction_liblinear)})
