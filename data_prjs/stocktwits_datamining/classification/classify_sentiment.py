@@ -106,11 +106,12 @@ if __name__ == '__main__':
     # time_liblinear_train = t1-t0
     # time_liblinear_predict = t2-t1
 
+    table5.insert({'Training_time_for_SVC(kernel=rbf)': time_rbf_train, 'Prediction_time_for_SVC(kernel=rbf)': time_rbf_predict,
+                   'Results_for_SVC(kernel=rbf)':classification_report(test_labels, prediction_rbf)})
     # Print results in a nice table
     print("Results for SVC(kernel=rbf)")
     print("Training time: %fs; Prediction time: %fs" % (time_rbf_train, time_rbf_predict))
     print(classification_report(test_labels, prediction_rbf))
-    table5.insert({'Results_for_SVC(kernel=rbf)':classification_report(test_labels, prediction_rbf)})
     # print("Results for SVC(kernel=linear)")
     # print("Training time: %fs; Prediction time: %fs" % (time_linear_train, time_linear_predict))
     # print(classification_report(test_labels, prediction_linear))
@@ -118,8 +119,6 @@ if __name__ == '__main__':
     # print("Training time: %fs; Prediction time: %fs" % (time_liblinear_train, time_liblinear_predict))
     # print(classification_report(test_labels, prediction_liblinear))
     i = 0
-    table5.insert({'Training_time_for_SVC(kernel=rbf)': time_rbf_train, 'Prediction_time_for_SVC(kernel=rbf)': time_rbf_predict,
-                   'Results_for_SVC(kernel=rbf)':classification_report(test_labels, prediction_rbf)})
 
 for t in test_data:
     table5.insert({'body' : test_data[i], 'label': test_labels[i], 'c_label': prediction_rbf[i]})
