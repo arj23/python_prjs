@@ -50,12 +50,14 @@ if __name__ == '__main__':
         train_data.append(m['processed_body'])
         train_labels.append("neg")
 
-    count_bullish = 75000
-    count = bullish_collection.count()
-    for i in range(75000):
-        r = bullish_collection.find()[random.randrange(count)]
-        test_data.append(r['processed_body'])
+    result = bullish_collection.find()
+    i = 0
+    for m in result :
+        test_data.append(m['processed_body'])
         test_labels.append("pos")
+        i = i + 1
+        if i is 75000 :
+            break
 
     result = bearish_collection.find()
     i = 0
