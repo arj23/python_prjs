@@ -86,41 +86,47 @@ if __name__ == '__main__':
     time_rbf_train = t1-t0
     time_rbf_predict = t2-t1
 
-    # Perform classification with SVM, kernel=linear
-    classifier_linear = svm.SVC(kernel='linear')
-    t0 = time.time()
-    classifier_linear.fit(train_vectors, train_labels)
-    t1 = time.time()
-    prediction_linear = classifier_linear.predict(test_vectors)
-    t2 = time.time()
-    time_linear_train = t1-t0
-    time_linear_predict = t2-t1
-
-    # Perform classification with SVM, kernel=linear
-    classifier_liblinear = svm.LinearSVC()
-    t0 = time.time()
-    classifier_liblinear.fit(train_vectors, train_labels)
-    t1 = time.time()
-    prediction_liblinear = classifier_liblinear.predict(test_vectors)
-    t2 = time.time()
-    time_liblinear_train = t1-t0
-    time_liblinear_predict = t2-t1
+    # # Perform classification with SVM, kernel=linear
+    # classifier_linear = svm.SVC(kernel='linear')
+    # t0 = time.time()
+    # classifier_linear.fit(train_vectors, train_labels)
+    # t1 = time.time()
+    # prediction_linear = classifier_linear.predict(test_vectors)
+    # t2 = time.time()
+    # time_linear_train = t1-t0
+    # time_linear_predict = t2-t1
+    #
+    # # Perform classification with SVM, kernel=linear
+    # classifier_liblinear = svm.LinearSVC()
+    # t0 = time.time()
+    # classifier_liblinear.fit(train_vectors, train_labels)
+    # t1 = time.time()
+    # prediction_liblinear = classifier_liblinear.predict(test_vectors)
+    # t2 = time.time()
+    # time_liblinear_train = t1-t0
+    # time_liblinear_predict = t2-t1
 
     # Print results in a nice table
     print("Results for SVC(kernel=rbf)")
     print("Training time: %fs; Prediction time: %fs" % (time_rbf_train, time_rbf_predict))
     print(classification_report(test_labels, prediction_rbf))
     table5.insert({'Results_for_SVC(kernel=rbf)':classification_report(test_labels, prediction_rbf)})
-    print("Results for SVC(kernel=linear)")
-    print("Training time: %fs; Prediction time: %fs" % (time_linear_train, time_linear_predict))
-    print(classification_report(test_labels, prediction_linear))
-    print("Results for LinearSVC()")
-    print("Training time: %fs; Prediction time: %fs" % (time_liblinear_train, time_liblinear_predict))
-    print(classification_report(test_labels, prediction_liblinear))
-
+    # print("Results for SVC(kernel=linear)")
+    # print("Training time: %fs; Prediction time: %fs" % (time_linear_train, time_linear_predict))
+    # print(classification_report(test_labels, prediction_linear))
+    # print("Results for LinearSVC()")
+    # print("Training time: %fs; Prediction time: %fs" % (time_liblinear_train, time_liblinear_predict))
+    # print(classification_report(test_labels, prediction_liblinear))
+    i = 0
     table5.insert({'Training_time_for_SVC(kernel=rbf)': time_rbf_train, 'Prediction_time_for_SVC(kernel=rbf)': time_rbf_predict,
-                   'Results_for_SVC(kernel=rbf)':classification_report(test_labels, prediction_rbf),
-                   'Training_time_for_SVC(kernel=linear)': time_linear_train, 'Prediction_time_for_SVC(kernel=linear)': time_linear_predict,
-                   'Results_for_SVC(kernel=linear)': classification_report(test_labels, prediction_linear),
-                   'Training_time_for_LinearSVC()': time_liblinear_train, 'Prediction_time_for_LinearSVC()': time_liblinear_predict,
-                   'Results_for_LinearSVC()': classification_report(test_labels, prediction_liblinear)})
+                   'Results_for_SVC(kernel=rbf)':classification_report(test_labels, prediction_rbf)})
+
+for t in test_data:
+    table5.insert({'body' : test_data[i], 'label': test_labels[i], 'c_label': prediction_rbf[i]})
+    i = i+1
+    # 'Training_time_for_SVC(kernel=linear)': time_linear_train, 'Prediction_time_for_SVC(kernel=linear)': time_linear_predict,
+    # 'Results_for_SVC(kernel=linear)': classification_report(test_labels, prediction_linear),
+    # 'Training_time_for_LinearSVC()': time_liblinear_train, 'Prediction_time_for_LinearSVC()': time_liblinear_predict,
+    # 'Results_for_LinearSVC()': classification_report(test_labels, prediction_liblinear)
+
+
