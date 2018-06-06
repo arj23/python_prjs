@@ -118,5 +118,8 @@ def main():
         calc_low_id = True
     print("Threshold of messages satisfied")
 
-
-if __name__ == "__main__": main()
+def test():
+    api_url = 'https://api.stocktwits.com/api/2/watchlists/static/symbols/create.json?symbols=AUDJPY&initial_list=false'
+    req = requests.post(api_url)
+    print(req)
+if __name__ == "__main__": test()

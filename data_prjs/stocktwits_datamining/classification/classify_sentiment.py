@@ -25,7 +25,6 @@ def connect_to_mongodb (db_url, db_name):
 db_address = 'mongodb://'+ username +':' + password + '@137.74.100.108/admin?authSource=admin'
 
 if __name__ == '__main__':
-
     classes = ['pos', 'neg']
     db_obj = connect_to_mongodb(db_address, 'stocktwits')
     bullish_collection_sample  = db_obj['bullish_msg_sample']

@@ -1,0 +1,136 @@
+import pymongo
+import requests
+import json
+import datetime
+import time
+import re
+import urllib
+
+username = 'admin'
+password = urllib.parse.quote_plus('abc!@#QWE')
+
+db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217/admin?authSource=admin'
+
+def connect_to_mongodb (db_url, db_name):
+    connection = pymongo.MongoClient(db_url)
+    return connection[db_name]
+
+def get_messages_from_stocktwits(last_message_id=None):
+    api_url = ''
+    if last_message_id is None:
+        api_url = 'https://api.stocktwits.com/api/2/streams/all.json?access_token=75c44c9341cf26a5383dfd76b687ee30817dd601&filter=top&max'
+    else:
+        api_url = 'https://api.stocktwits.com/api/2/streams/all.json?access_token=75c44c9341cf26a5383dfd76b687ee30817dd601&filter=top&max={}'.format(last_message_id)
+    req = requests.get(api_url)
+    data = json.loads(req.text)
+    return data.get('messages')
+
+def str_datetime_to_obj_datetime(datetime_str):
+    date_str = datetime_str.split("T")[0];
+    time_str = datetime_str.split("T")[1];
+    year = date_str.split("-")[0]
+    month = date_str.split("-")[1]
+    day = date_str.split("-")[2]
+    hour = time_str.split(":")[0]
+    minute = time_str.split(":")[1]
+    second = time_str.split(":")[2].split("Z")[0]
+    date_time = datetime.datetime(int(year), int(month), int(day), int(hour), int(minute), int(second))
+    return date_time
+
+def message_cleaning(message) :
+    message_ = ""
+    message_ += message
+    message_ = message_.replace("not " , "negtag_")
+    message_ = message_.replace("no " , "negtag_")
+    message_ = message_.replace("none " , "negtag_")
+    message_ = message_.replace("neither " , "negtag_")
+    message_ = message_.replace("never " , "negtag_")
+    message_ = message_.replace("neither " , "negtag_")
+    message_ = message_.replace("nobody " , "negtag_")
+    message_ = message_.replace(" a " , " ")
+    message_ = message_.replace(" an " , " ")
+    message_ = message_.replace(" the " , " ")
+    message_ = message_.replace(":(" , "emojineg")
+    message_ = message_.replace(":-(" , "emojineg")
+    message_ = message_.replace(":)" , "emojipos")
+    message_ = message_.replace(":-)" , "emojipos")
+    message_ = re.sub(r"\$\S+",'cashtag', message_)
+    message_ = re.sub(r"\@\S+",'usertag', message_)
+    message_ = re.sub(r"https://\S+",'linktag', message_)
+    message_ = re.sub(r"http://\S+",'linktag', message_)
+    message_ = re.sub(r"\b[0-9]+\b",'numbertag', message_)
+
+    return  message_
+
+def main() :
+    db_obj = connect_to_mongodb(db_address, 'stocktwits')
+    msgs_collection = db_obj['all_msgs']
+    bullish_collection = db_obj['bullish_collection']
+    bearish_collection = db_obj['bearish_collection']
+
+    max_count = 90
+    print(max_count)
+    message_count = 0
+    low_id = 0;
+    while (message_count < max_count):
+        if low_id is 0:
+            print("there is no message in db to get lowest id")
+            result = msgs_collection.find().sort("id", pymongo.ASCENDING).limit(1);
+            for r in result:
+                low_id = r['id']
+        messages = get_messages_from_stocktwits(low_id)
+        if messages is None or len(messages) == 0:
+            print('Receive no message from request, trying again...')
+            continue
+        for message in messages:
+            date_str = message['created_at'];
+            datetime_obj = str_datetime_to_obj_datetime(date_str)
+            print(datetime_obj)
+            clean_message = message_cleaning(message['body'])
+            low_id = message['id']
+            if (message['entities']['sentiment']):
+                if (message['entities']['sentiment']['basic'] == 'Bullish'):
+                    bullish_collection.insert({'id': message['id'],
+                                               'user_username': message['user']['username'],
+                                               'user_id': message['user']['id'],
+                                               'created_at': datetime_obj,
+                                               'body': message['body'],
+                                               'processed_body': clean_message})
+                    msgs_collection.insert({'id': message['id'],
+                                            'user_username': message['user']['username'],
+                                            'user_id': message['user']['id'],
+                                            'created_at': datetime_obj,
+                                            'body': message['body'],
+                                            'processed_body': clean_message,
+                                            'sentiment': 'Bullish'})
+
+                elif (message['entities']['sentiment']['basic'] == 'Bearish'):
+                    bearish_collection.insert({'id': message['id'],
+                                               'user_username': message['user']['username'],
+                                               'user_id': message['user']['id'],
+                                               'created_at': datetime_obj,
+                                               'body': message['body'],
+                                               'processed_body': clean_message})
+                    msgs_collection.insert({'id': message['id'],
+                                            'user_username': message['user']['username'],
+                                            'user_id': message['user']['id'],
+                                            'created_at': datetime_obj,
+                                            'body': message['body'],
+                                            'processed_body': clean_message,
+                                            'sentiment': 'Bearish'})
+            else:
+                msgs_collection.insert({'id': message['id'],
+                                        'user_username': message['user']['username'],
+                                        'user_id': message['user']['id'],
+                                        'created_at': datetime_obj,
+                                        'body': message['body'],
+                                        'processed_body': clean_message,
+                                        'sentiment': 'None'})
+
+
+            message_count += 1;
+        print("{} Messages added to database...".format(message_count));
+        time.sleep(30)
+    print("Threshold of messages satisfied")
+
+if __name__ == "__main__": main()

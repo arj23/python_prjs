@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a29958d-40fc-4358-9783-658bd6af8491" name="Default" comment="remove prints">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/read_data/get_all_msgs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classification/classify_sentiment.py" afterPath="$PROJECT_DIR$/classification/classify_sentiment.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/read_data/store_in_mongo_db.py" afterPath="$PROJECT_DIR$/read_data/store_in_mongo_db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/read_data/update_db_from_bottom.py" afterPath="$PROJECT_DIR$/read_data/update_db_from_bottom.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,8 +17,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/stocktwits_datamining$30min2017.coverage" NAME="30min2017 Coverage Results" MODIFIED="1519330123365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/query_stocktwits_statistics" />
-    <SUITE FILE_PATH="coverage/stocktwits_datamining$store_in_mongo_db.coverage" NAME="store_in_mongo_db Coverage Results" MODIFIED="1518185239264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$update_db_from_bottom.coverage" NAME="update_db_from_bottom Coverage Results" MODIFIED="1518379122007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/stocktwits_datamining$store_in_mongo_db.coverage" NAME="store_in_mongo_db Coverage Results" MODIFIED="1526042731465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/read_data" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$30minall.coverage" NAME="30minall Coverage Results" MODIFIED="1518380028153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/query_stocktwits_statistics" />
     <SUITE FILE_PATH="coverage/read_stocktwits$creat_csv.coverage" NAME="creat_csv Coverage Results" MODIFIED="1516562749079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$save_classify_to_excel.coverage" NAME="save_classify_to_excel Coverage Results" MODIFIED="1524210614371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
@@ -22,6 +26,7 @@
     <SUITE FILE_PATH="coverage/read_stocktwits$store_in_mongo_db.coverage" NAME="store_in_mongo_db Coverage Results" MODIFIED="1517489864597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$sentiment_corectness.coverage" NAME="sentiment_corectness Coverage Results" MODIFIED="1522526330571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$classify_bullish.coverage" NAME="classify_bullish Coverage Results" MODIFIED="1519990960076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
+    <SUITE FILE_PATH="coverage/stocktwits_datamining$get_all_msgs.coverage" NAME="get_all_msgs Coverage Results" MODIFIED="1528275877691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/read_data" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$30min2016.coverage" NAME="30min2016 Coverage Results" MODIFIED="1519969095992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/query_stocktwits_statistics" />
     <SUITE FILE_PATH="coverage/stocktwits_datamining$calculate_sw.coverage" NAME="calculate_sw Coverage Results" MODIFIED="1522427540172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
     <SUITE FILE_PATH="coverage/read_stocktwits$update_db_from_bottom.coverage" NAME="update_db_from_bottom Coverage Results" MODIFIED="1517577387298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -32,8 +37,8 @@
       <file leaf-file-name="classify_sentiment.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classification/classify_sentiment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="110" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state relative-caret-position="-2079">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#281#295#0" expanded="true" />
               </folding>
@@ -53,11 +58,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="select_classified_messages.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classification/select_classified_messages.py">
+      <file leaf-file-name="creat_csv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/read_data/creat_csv.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="store_in_mongo_db.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/read_data/store_in_mongo_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1869">
+              <caret line="97" column="30" lean-forward="false" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update_db_from_bottom.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/read_data/update_db_from_bottom.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_all_msgs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/read_data/get_all_msgs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2037">
+              <caret line="133" column="44" lean-forward="true" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="select_classified_messages.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classification/select_classified_messages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -68,7 +121,7 @@
       <file leaf-file-name="calculate_sw.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/calculate_sw.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
+            <state relative-caret-position="525">
               <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="45" selection-end-column="41" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -77,53 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="periodic_executor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/periodic_executor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2583">
-              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/network.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3570">
-              <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cursor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/pymongo/cursor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24129">
-              <caret line="1175" column="0" lean-forward="false" selection-start-line="1175" selection-start-column="0" selection-end-line="1175" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="create_sample.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/create_sample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save_classify_to_excel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classification/save_classify_to_excel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-36">
+              <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -134,8 +145,8 @@
       <file leaf-file-name="sentiment_corectness.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/sentiment_corectness.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2709">
-              <caret line="132" column="39" lean-forward="false" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="39" />
+            <state relative-caret-position="-327">
+              <caret line="100" column="19" lean-forward="false" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -171,8 +182,6 @@
         <option value="$PROJECT_DIR$/creat_csv.py" />
         <option value="$PROJECT_DIR$/store_in_mongo_db.py" />
         <option value="$PROJECT_DIR$/update_db_from_bottom.py" />
-        <option value="$PROJECT_DIR$/read_data/store_in_mongo_db.py" />
-        <option value="$PROJECT_DIR$/read_data/update_db_from_bottom.py" />
         <option value="$PROJECT_DIR$/query_stocktwits_statistics/30minall.py" />
         <option value="$PROJECT_DIR$/read_data/creat_csv.py" />
         <option value="$PROJECT_DIR$/query_stocktwits_statistics/30min2017.py" />
@@ -185,10 +194,13 @@
         <option value="$PROJECT_DIR$/classification/save_classify_to_excel.py" />
         <option value="$PROJECT_DIR$/classification/calculate_sw.py" />
         <option value="$PROJECT_DIR$/select_classified_sentiments.py" />
-        <option value="$PROJECT_DIR$/classification/select_classified_messages.py" />
         <option value="$PROJECT_DIR$/classification/test.py" />
         <option value="$PROJECT_DIR$/classification/sentiment_corectness.py" />
         <option value="$PROJECT_DIR$/classification/classify_sentiment.py" />
+        <option value="$PROJECT_DIR$/read_data/store_in_mongo_db.py" />
+        <option value="$PROJECT_DIR$/read_data/update_db_from_bottom.py" />
+        <option value="$PROJECT_DIR$/classification/select_classified_messages.py" />
+        <option value="$PROJECT_DIR$/read_data/get_all_msgs.py" />
       </list>
     </option>
   </component>
@@ -239,18 +251,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="stocktwits_datamining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stocktwits_datamining" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -265,68 +265,30 @@
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+              <item name="stocktwits_datamining" type="cbb8eebc:String" user="stocktwits_datamining" />
+              <item name="query_stocktwits_statistics" type="cbb8eebc:String" user="query_stocktwits_statistics" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="ahmadreza" type="cbb8eebc:String" user="ahmadreza" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="ahmadreza" type="cbb8eebc:String" user="ahmadreza" />
-              <item name=".PyCharm2017.2" type="cbb8eebc:String" user=".PyCharm2017.2" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="ahmadreza" type="cbb8eebc:String" user="ahmadreza" />
-              <item name=".PyCharm2017.2" type="cbb8eebc:String" user=".PyCharm2017.2" />
-              <item name="system" type="cbb8eebc:String" user="system" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="ahmadreza" type="cbb8eebc:String" user="ahmadreza" />
-              <item name=".PyCharm2017.2" type="cbb8eebc:String" user=".PyCharm2017.2" />
-              <item name="system" type="cbb8eebc:String" user="system" />
-              <item name="python_stubs" type="cbb8eebc:String" user="python_stubs" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="ahmadreza" type="cbb8eebc:String" user="ahmadreza" />
-              <item name=".PyCharm2017.2" type="cbb8eebc:String" user=".PyCharm2017.2" />
-              <item name="system" type="cbb8eebc:String" user="system" />
-              <item name="python_stubs" type="cbb8eebc:String" user="python_stubs" />
-              <item name="917069224" type="cbb8eebc:String" user="917069224" />
+              <item name="stocktwits_datamining" type="cbb8eebc:String" user="stocktwits_datamining" />
+              <item name="read_data" type="cbb8eebc:String" user="read_data" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="stocktwits_datamining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stocktwits_datamining" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -352,7 +314,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.classify_sentiment">
+  <component name="RunManager" selected="Python.get_all_msgs">
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -494,42 +456,6 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="calculate_sw" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classification" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="stocktwits_datamining" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classification/calculate_sw.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="classify_bullish" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classification" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="stocktwits_datamining" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\MYFILES\Projects\python_prjs\data_prjs\stocktwits_datamining\classification\classify_sentiment.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="classify_sentiment" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -544,6 +470,24 @@
       <module name="stocktwits_datamining" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classification/classify_sentiment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="get_all_msgs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/read_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="stocktwits_datamining" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/read_data/get_all_msgs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -584,20 +528,38 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="store_in_mongo_db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/read_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="stocktwits_datamining" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/read_data/store_in_mongo_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.classify_bullish" />
-      <item index="1" class="java.lang.String" itemvalue="Python.save_classify_to_excel" />
-      <item index="2" class="java.lang.String" itemvalue="Python.calculate_sw" />
-      <item index="3" class="java.lang.String" itemvalue="Python.classify_sentiment" />
-      <item index="4" class="java.lang.String" itemvalue="Python.sentiment_corectness" />
+      <item index="0" class="java.lang.String" itemvalue="Python.save_classify_to_excel" />
+      <item index="1" class="java.lang.String" itemvalue="Python.classify_sentiment" />
+      <item index="2" class="java.lang.String" itemvalue="Python.sentiment_corectness" />
+      <item index="3" class="java.lang.String" itemvalue="Python.store_in_mongo_db" />
+      <item index="4" class="java.lang.String" itemvalue="Python.get_all_msgs" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.classify_sentiment" />
-        <item index="1" class="java.lang.String" itemvalue="Python.save_classify_to_excel" />
-        <item index="2" class="java.lang.String" itemvalue="Python.sentiment_corectness" />
-        <item index="3" class="java.lang.String" itemvalue="Python.calculate_sw" />
-        <item index="4" class="java.lang.String" itemvalue="Python.classify_bullish" />
+        <item index="0" class="java.lang.String" itemvalue="Python.get_all_msgs" />
+        <item index="1" class="java.lang.String" itemvalue="Python.store_in_mongo_db" />
+        <item index="2" class="java.lang.String" itemvalue="Python.classify_sentiment" />
+        <item index="3" class="java.lang.String" itemvalue="Python.save_classify_to_excel" />
+        <item index="4" class="java.lang.String" itemvalue="Python.sentiment_corectness" />
       </list>
     </recent_temporary>
   </component>
@@ -645,17 +607,17 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28141782" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.216971" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.49785176" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23529412" sideWeight="0.5042965" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23529412" sideWeight="0.33136413" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23529412" sideWeight="0.49570355" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23529412" sideWeight="0.6686359" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39932126" sideWeight="0.49570355" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39932126" sideWeight="0.5929108" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -683,7 +645,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/read_data/update_db_from_bottom.py</url>
-          <line>41</line>
+          <line>45</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -699,6 +661,11 @@
           <url>file://$PROJECT_DIR$/classification/classify_sentiment.py</url>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/read_data/get_all_msgs.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -707,21 +674,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="88" />
+      <option name="time" value="94" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/read_data/update_db_from_bottom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#14#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/query_stocktwits_statistics/30min2017.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
@@ -749,7 +706,7 @@
         <state relative-caret-position="567">
           <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="52" />
           <folding>
-            <element signature="e#0#14#0" expanded="false" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -774,7 +731,7 @@
         <state relative-caret-position="819">
           <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
           <folding>
-            <element signature="e#0#14#0" expanded="false" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -799,7 +756,7 @@
         <state relative-caret-position="1092">
           <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="42" />
           <folding>
-            <element signature="e#0#14#0" expanded="false" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -974,33 +931,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classification/classify_bearish.py" />
-    <entry file="file://$PROJECT_DIR$/read_data/store_in_mongo_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_data/creat_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_data/update_db_from_bottom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classification/calculate_sw.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
@@ -1022,7 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24129">
           <caret line="1175" column="0" lean-forward="false" selection-start-line="1175" selection-start-column="0" selection-end-line="1175" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2583">
           <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,17 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3570">
           <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classification/select_classified_messages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1056,16 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classification/create_sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -1082,10 +989,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/read_data/creat_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_data/store_in_mongo_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1869">
+          <caret line="97" column="30" lean-forward="false" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_data/update_db_from_bottom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classification/calculate_sw.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
+        <state relative-caret-position="525">
           <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="45" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/create_sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -1094,8 +1041,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classification/sentiment_corectness.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2709">
-          <caret line="132" column="39" lean-forward="false" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="39" />
+        <state relative-caret-position="-327">
+          <caret line="100" column="19" lean-forward="false" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/select_classified_messages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_data/get_all_msgs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2037">
+          <caret line="133" column="44" lean-forward="true" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -1104,8 +1071,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classification/classify_sentiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        <state relative-caret-position="-2079">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#281#295#0" expanded="true" />
           </folding>

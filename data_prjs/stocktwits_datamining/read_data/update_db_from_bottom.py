@@ -3,6 +3,10 @@ import datetime
 import requests
 import json
 import urllib
+username = 'admin'
+password = urllib.parse.quote_plus('abc!@#QWE')
+
+db_address = 'mongodb://'+ username +':' + password + '@137.74.100.108/admin?authSource=admin'
 
 def str_datetime_to_obj_datetime(datetime_str):
     date_str = datetime_str.split("T")[0];
