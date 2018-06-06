@@ -10,9 +10,9 @@ username = 'admin'
 password = urllib.parse.quote_plus('abc!@#QWE')
 
 db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217/admin?authSource=admin'
-token_list = ['94b81109ac49597b357c75c5870526e3894877d8',
-              '7e297ff94f94fc1dd3d8047afc6be52bc0080ace',
-              '75c44c9341cf26a5383dfd76b687ee30817dd601']
+token_list = ['7e297ff94f94fc1dd3d8047afc6be52bc0080ace',
+              '75c44c9341cf26a5383dfd76b687ee30817dd601',
+              '94b81109ac49597b357c75c5870526e3894877d8']
 def connect_to_mongodb (db_url, db_name):
     connection = pymongo.MongoClient(db_url)
     return connection[db_name]
@@ -137,7 +137,7 @@ def main() :
 
             message_count += 1;
         # print("{} Messages added to database...".format(message_count));
-        time.sleep(3)
+        # time.sleep(3)
     print("Threshold of messages satisfied")
 
 if __name__ == "__main__": main()
