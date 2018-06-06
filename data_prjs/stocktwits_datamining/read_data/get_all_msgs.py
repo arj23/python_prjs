@@ -10,12 +10,19 @@ username = 'admin'
 password = urllib.parse.quote_plus('abc!@#QWE')
 
 db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217/admin?authSource=admin'
-token_list = ['7e297ff94f94fc1dd3d8047afc6be52bc0080ace',
+token_list = ['94b81109ac49597b357c75c5870526e3894877d8',
               '75c44c9341cf26a5383dfd76b687ee30817dd601',
-              '94b81109ac49597b357c75c5870526e3894877d8']
+              '7e297ff94f94fc1dd3d8047afc6be52bc0080ace']
 def connect_to_mongodb (db_url, db_name):
     connection = pymongo.MongoClient(db_url)
     return connection[db_name]
+
+def is_json(myjson):
+  try:
+    json_object = json.loads(myjson)
+  except ValueError:
+    return False
+  return True
 
 def get_messages_from_stocktwits(token,last_message_id=None):
     api_url = ''
@@ -24,8 +31,10 @@ def get_messages_from_stocktwits(token,last_message_id=None):
     else:
         api_url = 'https://api.stocktwits.com/api/2/streams/all.json?access_token={}&filter=top&max={}'.format(token,last_message_id)
     req = requests.get(api_url)
-    data = json.loads(req.text)
-    return data.get('messages')
+    if is_json(req.text) :
+        data = json.loads(req.text)
+        return data.get('messages')
+    return None
 
 def str_datetime_to_obj_datetime(datetime_str):
     date_str = datetime_str.split("T")[0];
