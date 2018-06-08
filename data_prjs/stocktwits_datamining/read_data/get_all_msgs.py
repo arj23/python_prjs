@@ -30,13 +30,13 @@ def get_messages_from_stocktwits(token,last_message_id=None):
         api_url = 'https://api.stocktwits.com/api/2/streams/all.json?access_token={}&filter=top&max'.format(token)
     else:
         api_url = 'https://api.stocktwits.com/api/2/streams/all.json?access_token={}&filter=top&max={}'.format(token,last_message_id)
-    try:    
-	req = requests.get(api_url)
+    try:
+        req = requests.get(api_url)
+        if is_json(req.text) :
+            data = json.loads(req.text)
+            return data.get('messages')
     except requests.exceptions.ConnectionError:
-	return None
-    if is_json(req.text) :
-        data = json.loads(req.text)
-        return data.get('messages')
+        return None
     return None
 
 def str_datetime_to_obj_datetime(datetime_str):
