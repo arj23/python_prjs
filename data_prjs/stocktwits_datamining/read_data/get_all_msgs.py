@@ -82,7 +82,7 @@ def main() :
     bullish_collection = db_obj['bullish_collection']
     bearish_collection = db_obj['bearish_collection']
 
-    max_count = 1000000
+    max_count = 10000000
     print(max_count)
     message_count = 0
     low_id = 0;
