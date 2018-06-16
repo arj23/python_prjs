@@ -9,7 +9,7 @@ import numpy
 username = 'admin'
 password = urllib.parse.quote_plus('abc!@#QWE')
 
-db_address = 'mongodb://'+ username +':' + password + '@137.74.100.108/admin?authSource=admin'
+db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217/admin?authSource=admin'
 
 def append_df_to_excel(filename, df, sheetname='sheet1', startrow=None,
                        **to_excel_kwargs):
@@ -60,11 +60,11 @@ def append_df_to_excel(filename, df, sheetname='sheet1', startrow=None,
         startrow = 0
 
     # write out the new sheet
-    df.to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs)
+    df.to_frame().to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs)
     if startrow != 0:
-        df.to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs, header=False)
+        df.to_frame().to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs, header=False)
     else:
-        df.to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs)
+        df.to_frame().to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs)
 
     # save the workbook
     writer.save()
