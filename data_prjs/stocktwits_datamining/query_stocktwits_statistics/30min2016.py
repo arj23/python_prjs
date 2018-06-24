@@ -93,7 +93,7 @@ def connect_to_mongodb(db_url, db_name, db_collection):
 def main():
     msgs_collection = connect_to_mongodb(db_address, 'stocktwits', 'suggested_msg')
 
-    end_time = datetime.datetime(2016,12,31,23,59,59)
+    end_time = datetime.datetime(2017,12,31,23,59,59)
     start_datetime = end_time - datetime.timedelta(minutes=30)
     min_msg_count = 1000000000000
     max_msg_count = 0
@@ -102,7 +102,7 @@ def main():
     loop_count = 0
     date_list = []
     count_list = []
-    while datetime.datetime(2016,1,1,0,0,0) < start_datetime :
+    while datetime.datetime(2017,1,1,0,0,0) < start_datetime :
         result_curser = msgs_collection.find({'created_at': {'$lt': end_time, '$gte': start_datetime}})
         count = result_curser.count();
         if count is 0:
@@ -128,7 +128,7 @@ def main():
     df = df.applymap(lambda x: x.encode('unicode_escape').
                      decode('utf-8') if isinstance(x, str) else x)
 
-    append_df_to_excel("2016.xlsx", df)
+    append_df_to_excel("2017.xlsx", df)
 
 
 if __name__ == "__main__": main()

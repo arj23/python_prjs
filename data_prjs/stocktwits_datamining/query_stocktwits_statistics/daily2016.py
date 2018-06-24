@@ -60,11 +60,11 @@ def append_df_to_excel(filename, df, sheetname='sheet1', startrow=None,
         startrow = 0
 
     # write out the new sheet
-    df.to_frame().to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs)
+    df.to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs)
     if startrow != 0:
-        df.to_frame().to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs, header=False)
+        df.to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs, header=False)
     else:
-        df.to_frame().to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs)
+        df.to_excel(writer, sheetname, startrow=startrow, **to_excel_kwargs)
 
     # save the workbook
     writer.save()
@@ -105,39 +105,39 @@ def main():
     loop_count = 0
     date_list = []
     count_list = []
-    while datetime.datetime(2016,1,1,0,0,0) < start_datetime :
-        result_curser = msgs_collection.find({'created_at': {'$lt': end_time, '$gte': start_datetime}})
-        count = result_curser.count();
-        if count is 0:
-            result = msgs_collection.find({'created_at': {'$lt': start_datetime}})
-            if result.count() is 0:
-                break;
-        all_msg_count += count;
-        if min_msg_count > count:
-            min_msg_count = count
-        if max_msg_count < count:
-            max_msg_count = count
-        end_time = start_datetime
-        start_datetime = start_datetime - datetime.timedelta(days=1)
-        loop_count += 1;
-        date_list.append(start_datetime)
-        count_list.append(count)
-    mean_msg_count = all_msg_count/loop_count
-    print("Mean = {}".format(mean_msg_count))
-    print("Min = {}".format(min_msg_count))
-    print("Max = {}".format(max_msg_count))
-    print("Number of all messages = {}".format(all_msg_count))
-    results_collection.insert({'2016_daily_Mean': mean_msg_count, '2016_daily_min': min_msg_count, '2016_daily_max': max_msg_count, '2016_all_count': all_msg_count})
-    std_dev = numpy.std(count_list)
-    results_collection.insert({'2016_std_dev': std_dev})
+    # while datetime.datetime(2016,1,1,0,0,0) < start_datetime :
+    #     result_curser = msgs_collection.find({'created_at': {'$lt': end_time, '$gte': start_datetime}})
+    #     count = result_curser.count();
+    #     if count is 0:
+    #         result = msgs_collection.find({'created_at': {'$lt': start_datetime}})
+    #         if result.count() is 0:
+    #             break;
+    #     all_msg_count += count;
+    #     if min_msg_count > count:
+    #         min_msg_count = count
+    #     if max_msg_count < count:
+    #         max_msg_count = count
+    #     end_time = start_datetime
+    #     start_datetime = start_datetime - datetime.timedelta(days=1)
+    #     loop_count += 1;
+    #     date_list.append(start_datetime)
+    #     count_list.append(count)
+    # mean_msg_count = all_msg_count/loop_count
+    # print("Mean = {}".format(mean_msg_count))
+    # print("Min = {}".format(min_msg_count))
+    # print("Max = {}".format(max_msg_count))
+    # print("Number of all messages = {}".format(all_msg_count))
+    # results_collection.insert({'2016_daily_Mean': mean_msg_count, '2016_daily_min': min_msg_count, '2016_daily_max': max_msg_count, '2016_all_count': all_msg_count})
+    # std_dev = numpy.std(count_list)
+    # results_collection.insert({'2016_std_dev': std_dev})
 
 
 
-    end_time = datetime.datetime(2016,10,22,23,59,59)
+    end_time = datetime.datetime(2016,11,2,23,59,59)
     start_datetime = end_time - datetime.timedelta(minutes=30)
     count_list_30min = []
     date_list_30min = []
-    while datetime.datetime(2016,11,2,0,0,0) < start_datetime :
+    while datetime.datetime(2016,10,22,0,0,0) < start_datetime :
         result_curser = msgs_collection.find({'created_at': {'$lt': end_time, '$gte': start_datetime}})
         count = result_curser.count();
         end_time = start_datetime
