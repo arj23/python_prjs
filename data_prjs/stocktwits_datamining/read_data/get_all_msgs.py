@@ -7,9 +7,9 @@ import re
 import urllib
 
 username = 'admin'
-password = urllib.parse.quote_plus('abc!@#QWE')
+password = urllib.parse.quote_plus('9X00DfaColorfullGP(d12@l4l')
 
-db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217/admin?authSource=admin'
+db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217:23727/admin?authSource=admin'
 token_list = ['94b81109ac49597b357c75c5870526e3894877d8',
               '75c44c9341cf26a5383dfd76b687ee30817dd601',
               '7e297ff94f94fc1dd3d8047afc6be52bc0080ace']
