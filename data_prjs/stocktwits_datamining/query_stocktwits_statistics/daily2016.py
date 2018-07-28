@@ -134,7 +134,6 @@ def main():
 
 
     end_time = datetime.datetime(2016,11,2,23,59,59)
-    end_time = end_time.ut
     start_datetime = end_time - datetime.timedelta(minutes=30)
     count_list_30min = []
     date_list_30min = []
