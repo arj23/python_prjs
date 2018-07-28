@@ -7,7 +7,7 @@ from collections import OrderedDict
 import numpy
 
 username = 'admin'
-password = '900XDfaColorfullGP(d12@l4l'
+password = urllib.parse.quote_plus('900XDfaColorfullGP(d12@l4l')
 
 db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217:23727/admin?authSource=admin'
 
