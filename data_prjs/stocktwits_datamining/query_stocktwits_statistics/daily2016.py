@@ -82,8 +82,8 @@ def str_datetime_to_obj_datetime(datetime_str):
     return date_time
 
 def obj_datetime_to_str_datetime(datetime_obj):
-    date_str = str(datetime.date.year) + '-' + str(datetime.date.month) + '-' + str(datetime.date.day)
-    time_str = str(datetime.time.hour) + ':' + str(datetime.time.minute) + ':' + str(datetime.time.second)
+    date_str = str(datetime_obj.year) + '-' + str(datetime_obj.month) + '-' + str(datetime_obj.day)
+    time_str = str(datetime_obj.hour) + ':' + str(datetime_obj.minute) + ':' + str(datetime_obj.second)
     datetime_str = date_str + 'T' + time_str + 'Z'
     return datetime_str
 
@@ -142,7 +142,7 @@ def main():
         count = result_curser.count();
         end_time = start_datetime
         start_datetime = start_datetime - datetime.timedelta(minutes=30)
-        date_list_30min.append(start_datetime)
+        date_list_30min.append(obj_datetime_to_str_datetime(start_datetime))
         count_list_30min.append(count)
     df = DataFrame(data=OrderedDict({'Date Time': date_list_30min, 'count': count_list_30min}))
     df = df.applymap(lambda x: x.encode('unicode_escape').
