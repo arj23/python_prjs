@@ -9,7 +9,7 @@ import numpy
 username = 'admin'
 password = urllib.parse.quote_plus('abc!@#QWE')
 
-db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217/admin?authSource=admin'
+db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217:23727/admin?authSource=admin'
 
 def append_df_to_excel(filename, df, sheetname='sheet1', startrow=None,
                        **to_excel_kwargs):
@@ -134,6 +134,7 @@ def main():
 
 
     end_time = datetime.datetime(2016,11,2,23,59,59)
+    end_time = end_time.ut
     start_datetime = end_time - datetime.timedelta(minutes=30)
     count_list_30min = []
     date_list_30min = []
