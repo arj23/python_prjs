@@ -96,8 +96,8 @@ def main():
     msgs_collection  = db_obj['all_msgs']
     results_collection  = db_obj['results']
 
-    end_time = datetime.datetime(2017,12,31,23,59,59)
-    start_datetime = end_time - datetime.timedelta(minutes=30)
+    end_time = datetime.datetime(2014,12,31,23,59,59)
+    start_datetime = end_time - datetime.timedelta(days=1)
     min_msg_count = 1000000000000
     max_msg_count = 0
     mean_msg_count = 0
@@ -105,7 +105,7 @@ def main():
     loop_count = 0
     date_list = []
     count_list = []
-    while datetime.datetime(2013,1,1,0,0,0) < start_datetime :
+    while datetime.datetime(2014,1,1,0,0,0) < start_datetime :
         result_curser = msgs_collection.find({'created_at': {'$lt': end_time, '$gte': start_datetime}})
         count = result_curser.count();
         if count is 0:
@@ -118,7 +118,7 @@ def main():
         if max_msg_count < count:
             max_msg_count = count
         end_time = start_datetime
-        start_datetime = start_datetime - datetime.timedelta(minutes=30)
+        start_datetime = start_datetime - datetime.timedelta(days=1)
         loop_count += 1;
         date_list.append(start_datetime)
         count_list.append(count)
@@ -127,17 +127,17 @@ def main():
     print("Min = {}".format(min_msg_count))
     print("Max = {}".format(max_msg_count))
     print("Number of all messages = {}".format(all_msg_count))
-    results_collection.insert({'30min_all_daily_Mean': mean_msg_count, '30min_all_daily_min': min_msg_count, '30min_all_daily_max': max_msg_count, '30min_all_all_count': all_msg_count})
+    results_collection.insert({'2014_daily_Mean': mean_msg_count, '2014_daily_min': min_msg_count, '2014_daily_max': max_msg_count, '2014_all_count': all_msg_count})
     std_dev = numpy.std(count_list)
-    results_collection.insert({'30min_all_std_dev': std_dev})
+    results_collection.insert({'2014_std_dev': std_dev})
 
 
 
-    # end_time = datetime.datetime(30min_all,11,2,23,59,59)
+    # end_time = datetime.datetime(2014,11,2,23,59,59)
     # start_datetime = end_time - datetime.timedelta(minutes=30)
     # count_list_30min = []
     # date_list_30min = []
-    # while datetime.datetime(30min_all,10,22,0,0,0) < start_datetime :
+    # while datetime.datetime(2014,10,22,0,0,0) < start_datetime :
     #     result_curser = msgs_collection.find({'created_at': {'$lt': end_time, '$gte': start_datetime}})
     #     count = result_curser.count();
     #     end_time = start_datetime
@@ -147,8 +147,8 @@ def main():
     # df = DataFrame(data=OrderedDict({'Date Time': date_list_30min, 'count': count_list_30min}))
     # df = df.applymap(lambda x: x.encode('unicode_escape').
     #                  decode('utf-8') if isinstance(x, str) else x)
-    #
-    # append_df_to_excel("30min_all_30min.xlsx", df)
+    # 
+    # append_df_to_excel("2014_30min.xlsx", df)
 
 
 if __name__ == "__main__": main()

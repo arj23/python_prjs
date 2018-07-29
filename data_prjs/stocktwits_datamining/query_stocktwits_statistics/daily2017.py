@@ -4,11 +4,12 @@ import urllib
 from pandas import DataFrame
 import pandas as pd
 from collections import OrderedDict
+import numpy
 
 username = 'admin'
-password = urllib.parse.quote_plus('abc!@#QWE')
+password = urllib.parse.quote_plus('9X00DfaColorfullGP(d12@l4l')
 
-db_address = 'mongodb://'+ username +':' + password + '@137.74.100.108/admin?authSource=admin'
+db_address = 'mongodb://'+ username +':' + password + '@88.99.153.217:23727/admin?authSource=admin'
 
 def append_df_to_excel(filename, df, sheetname='sheet1', startrow=None,
                        **to_excel_kwargs):
@@ -81,20 +82,22 @@ def str_datetime_to_obj_datetime(datetime_str):
     return date_time
 
 def obj_datetime_to_str_datetime(datetime_obj):
-    date_str = str(datetime.date.year) + '-' + str(datetime.date.month) + '-' + str(datetime.date.day)
-    time_str = str(datetime.time.hour) + ':' + str(datetime.time.minute) + ':' + str(datetime.time.second)
+    date_str = str(datetime_obj.year) + '-' + str(datetime_obj.month) + '-' + str(datetime_obj.day)
+    time_str = str(datetime_obj.hour) + ':' + str(datetime_obj.minute) + ':' + str(datetime_obj.second)
     datetime_str = date_str + 'T' + time_str + 'Z'
     return datetime_str
 
-def connect_to_mongodb(db_url, db_name, db_collection):
+def connect_to_mongodb (db_url, db_name):
     connection = pymongo.MongoClient(db_url)
-    return connection[db_name][db_collection]
+    return connection[db_name]
 
 def main():
-    msgs_collection = connect_to_mongodb(db_address, 'stocktwits', 'suggested_msg')
+    db_obj = connect_to_mongodb(db_address, 'stocktwits')
+    msgs_collection  = db_obj['all_msgs']
+    results_collection  = db_obj['results']
 
     end_time = datetime.datetime(2017,12,31,23,59,59)
-    start_datetime = end_time - datetime.timedelta(minutes=30)
+    start_datetime = end_time - datetime.timedelta(days=1)
     min_msg_count = 1000000000000
     max_msg_count = 0
     mean_msg_count = 0
@@ -115,7 +118,7 @@ def main():
         if max_msg_count < count:
             max_msg_count = count
         end_time = start_datetime
-        start_datetime = start_datetime - datetime.timedelta(minutes=30)
+        start_datetime = start_datetime - datetime.timedelta(days=1)
         loop_count += 1;
         date_list.append(start_datetime)
         count_list.append(count)
@@ -124,11 +127,28 @@ def main():
     print("Min = {}".format(min_msg_count))
     print("Max = {}".format(max_msg_count))
     print("Number of all messages = {}".format(all_msg_count))
-    df = DataFrame(data=OrderedDict({'Date Time': date_list, 'count': count_list}))
-    df = df.applymap(lambda x: x.encode('unicode_escape').
-                     decode('utf-8') if isinstance(x, str) else x)
+    results_collection.insert({'2017_daily_Mean': mean_msg_count, '2017_daily_min': min_msg_count, '2017_daily_max': max_msg_count, '2017_all_count': all_msg_count})
+    std_dev = numpy.std(count_list)
+    results_collection.insert({'2017_std_dev': std_dev})
 
-    append_df_to_excel("2017.xlsx", df)
+
+
+    # end_time = datetime.datetime(2017,11,2,23,59,59)
+    # start_datetime = end_time - datetime.timedelta(minutes=30)
+    # count_list_30min = []
+    # date_list_30min = []
+    # while datetime.datetime(2017,10,22,0,0,0) < start_datetime :
+    #     result_curser = msgs_collection.find({'created_at': {'$lt': end_time, '$gte': start_datetime}})
+    #     count = result_curser.count();
+    #     end_time = start_datetime
+    #     start_datetime = start_datetime - datetime.timedelta(minutes=30)
+    #     date_list_30min.append(start_datetime-datetime.timedelta(hours=5))
+    #     count_list_30min.append(count)
+    # df = DataFrame(data=OrderedDict({'Date Time': date_list_30min, 'count': count_list_30min}))
+    # df = df.applymap(lambda x: x.encode('unicode_escape').
+    #                  decode('utf-8') if isinstance(x, str) else x)
+    # 
+    # append_df_to_excel("2017_30min.xlsx", df)
 
 
 if __name__ == "__main__": main()
