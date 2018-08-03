@@ -113,9 +113,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=8,minutes=30)), '$gte': (start_datetime+datetime.timedelta(hours=15))}})
@@ -125,9 +123,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=8)), '$gte': (start_datetime+datetime.timedelta(hours=15,minutes=30))}})
@@ -137,9 +133,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=7,minutes=30)), '$gte': (start_datetime+datetime.timedelta(hours=16))}})
@@ -149,9 +143,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=7)), '$gte': (start_datetime+datetime.timedelta(hours=16,minutes=30))}})
@@ -161,9 +153,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=6,minutes=30)), '$gte': (start_datetime+datetime.timedelta(hours=17))}})
@@ -173,9 +163,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=6)), '$gte': (start_datetime+datetime.timedelta(hours=17,minutes=30))}})
@@ -185,9 +173,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=5,minutes=30)), '$gte': (start_datetime+datetime.timedelta(hours=18))}})
@@ -197,9 +183,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=5)), '$gte': (start_datetime+datetime.timedelta(hours=18,minutes=30))}})
@@ -209,9 +193,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=4,minutes=30)), '$gte': (start_datetime+datetime.timedelta(hours=19))}})
@@ -221,9 +203,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=4)), '$gte': (start_datetime+datetime.timedelta(hours=19,minutes=30))}})
@@ -233,9 +213,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=3,minutes=30)), '$gte': (start_datetime+datetime.timedelta(hours=20))}})
@@ -245,9 +223,7 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
         ###############################
         result_curser = msgs_collection.find({'created_at': {'$lt': (end_time - datetime.timedelta(hours=3)), '$gte': (start_datetime+datetime.timedelta(hours=20,minutes=30))}})
@@ -257,10 +233,9 @@ def main():
             min_msg_count = count
         if max_msg_count < count:
             max_msg_count = count
-        end_time = start_datetime
         loop_count += 1;
-        date_list.append(start_datetime+datetime.timedelta(hours=14,minutes=30))
         count_list.append(count)
+        end_time = start_datetime
         start_datetime = start_datetime - datetime.timedelta(days=1)
     mean_msg_count = all_msg_count/loop_count
     print("Mean = {}".format(mean_msg_count))
